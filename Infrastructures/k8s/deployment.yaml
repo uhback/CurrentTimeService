@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cts-deploy
+  labels:
+    app: cts-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: cts-app
+  template:
+    metadata:
+      name: myctsk8s
+      labels:
+        app: cts-app
+        app.kubernetes.io/name: cts-app # Reserve name
+    spec:
+      containers:
+        - name: cts-app
+          image: charisma03/cts-app:latest
+          ports:
+            - containerPort: 80 # ports for my application
+              name: http-web-api
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 200Mi
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cts-svc
+spec:
+  selector:
+    app.kubernetes.io/name: cts-app # should be matched with deployment template one
+    # app: cts-app 
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 80
+  type: LoadBalancer
+
+
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: cts-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /
+# spec:
+#   rules:
+#   - host: cts-web.dev.com
+#     http:
+#       paths:
+#       - path: /api
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: cts-svc
+#             port:
+#               number: 80
