@@ -5,17 +5,11 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrentTimeService", "CurrentTimeService\CurrentTimeService.csproj", "{12816A8D-5738-4602-BD9A-B00C0D0161F6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9D751ADF-729E-4F73-96A2-C82C31857C99}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9D751ADF-729E-4F73-96A2-C82C31857C99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrentTimeService.Tests", "tests\CurrentTimeService.Tests\CurrentTimeService.Tests.csproj", "{8CB0941E-D0C1-4F14-961B-5007F5B1A778}"
 EndProject
 Global
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CDD18E8E-CB64-4763-88FF-F73C2C0444E7}
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -50,7 +44,13 @@ Global
 		{8CB0941E-D0C1-4F14-961B-5007F5B1A778}.Release|x86.ActiveCfg = Release|Any CPU
 		{8CB0941E-D0C1-4F14-961B-5007F5B1A778}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8CB0941E-D0C1-4F14-961B-5007F5B1A778} = {9D751ADF-729E-4F73-96A2-C82C31857C99}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDD18E8E-CB64-4763-88FF-F73C2C0444E7}
 	EndGlobalSection
 EndGlobal
