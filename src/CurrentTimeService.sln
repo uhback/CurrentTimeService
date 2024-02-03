@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrentTimeService", "Curre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9D751ADF-729E-4F73-96A2-C82C31857C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrentTimeService.Tests", "tests\CurrentTimeService.Tests\CurrentTimeService.Tests.csproj", "{8CB0941E-D0C1-4F14-961B-5007F5B1A778}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrentTimeService.Tests", "Tests\CurrentTimeService.Tests\CurrentTimeService.Tests.csproj", "{8CB0941E-D0C1-4F14-961B-5007F5B1A778}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
