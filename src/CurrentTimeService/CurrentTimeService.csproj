@@ -13,4 +13,8 @@
   <ItemGroup>
      <InternalsVisibleTo Include="CurrentTimeService.Tests" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middlewares/" />
+  </ItemGroup>
 </Project>
