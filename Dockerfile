@@ -8,11 +8,11 @@ EXPOSE 443
 
 # Copy the .csproj and restore dependencies
 COPY . ./
-RUN dotnet restore
+RUN dotnet restore src
 # Run test
-RUN dotnet test
+RUN dotnet test src
 # Build the application with release configuration
-RUN dotnet publish -c Release -o out
+RUN dotnet publish src -c Release -o out
 
 # Use a smaller runtime image for the final stage
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
