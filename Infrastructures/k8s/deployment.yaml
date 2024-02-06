@@ -14,7 +14,7 @@ spec:
       name: myctsk8s
       labels:
         app: cts-app
-        app.kubernetes.io/name: cts-app # Reserve name
+        # app.kubernetes.io/name: cts-app # Reserve name
     spec:
       containers:
         - name: cts-app
@@ -40,13 +40,14 @@ metadata:
   name: cts-svc
 spec:
   selector:
-    app.kubernetes.io/name: cts-app # should be matched with deployment template one
-    # app: cts-app 
+    # app.kubernetes.io/name: cts-app # should be matched with deployment template one
+    app: cts-app
   ports:
     - name: http
       protocol: TCP
       port: 8080
       targetPort: 80
+      #nodePort: 30038
   type: LoadBalancer
 
 
