@@ -9,6 +9,6 @@ public class CurrentTimeServiceController : ControllerBase
     [HttpGet]
     public ActionResult Get()
     {
-        return Ok(new { CreatedDate = DateTime.Now });
+        return Ok(new { CurrentTime = DateTime.Now });
     }
 }
